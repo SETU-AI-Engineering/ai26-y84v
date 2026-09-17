@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>aie26</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=226272" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="" target="_blank"><img height="15pt" src="style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/02-Motivating_Example/index.html#01-Introduction_to_Classification">Introduction to Classification</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/02-Motivating_Example/index.html#10-practical">practical</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Auto-MPG</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li >
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+										<li class="active">
+											<a href="01-Auto-MPG.html">Auto-MPG</a>
+										</li>
+										
+										<li >
+											<a href="02-Iris.html">Iris</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous"><a href="00-Outline.html">&larr; Previous (Outline)</a></li>
+			
+			
+			
+			<li class="next"><a href="02-Iris.html">Next (Iris) &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>Using python-based tools to investigate the <em>Auto-MPG</em> dataset</h1>
+<p>Last week's practical included an exercise to investigate the well-known <em>Auto-MPG</em> dataset relating to cars available to American customers during the 1970s and 1980s.</p>
+<p>Several questions were posed, and students were invited to answer them using tools they were familiar with.</p>
+<p>In today's lab, I have shared a <a href="files/investigation.ipynb">notebook</a> that uses python-based tools to investigate the <em>Auto-MPG</em> data set and is heavily annotated, to explain what it is doing and why.</p>
+<p>For convenience, the <em>Auto-MPG</em> dataset that was shared previously can also be obtained from <a href="files/data/auto-mpg.csv">here</a>.</p>
+<p>Your task is to step through the notebook, running each cell in turn, learning about how the outputs are generated.</p>
+<p>Notice how analysis is based on operations applied to the <em>Auto-MPG</em> data after it has been loaded into a pandas dataframe.</p>
+<p>The notebook also shows how <code>matplotlib</code> and <code>seaborn</code> libraries can be used to visualise the data.</p>
+<p>For the rest of this module, we will use such python libraries to perform data exploration, model building, prediction and validation.</p>
+		
+		<ul class="pager">
+			
+			<li class="previous"><a href="00-Outline.html">&larr; Previous (Outline)</a></li>
+			
+			
+			
+			<li class="next"><a href="02-Iris.html">Next (Iris) &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
