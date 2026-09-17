@@ -182,16 +182,16 @@ Next we cover installation of python using either a full <a href="https://www.an
 <p>Therefore, we will use <a href="https://jupyter.org">Jupyter (lab)</a> as the primary learning tool/environment, both for sourcing the data and for the data mining process itself.</p>
 <p><a name="Installation"></a></p>
 <h2>Installation</h2>
-<p>While any Python 3.14 distribution should be suitable for our needs, we recommend you either install a full <a href="https://www.anaconda.com/download">anaconda</a> distribution (about 6.39 GB, based on options) or a reduced <a href="https://www.anaconda.com/docs/getting-started/concepts/anaconda-or-miniconda">miniconda</a> distribution (about 250MB).</p>
+<p>While any Python 3.14 distribution should be suitable for our needs, we recommend you either install a full <a href="https://www.anaconda.com/download">anaconda</a> distribution (about 6.39 GB, based on options) or a reduced <a href="https://www.anaconda.com/docs/getting-started/concepts/anaconda-or-miniconda">miniconda</a> distribution (about 250MB). Python 3.13 or even python 3.12 should also be acceptable, although they might introduce slightly older versions of key packages like <code>pandas</code> and <code>scikit-learn</code>.</p>
 <p>Which should you choose? To be honest, it doesn't really matter but if you want to:</p>
 <ul>
-<li>get python development up and running quickly if connectivity is limite &mdash; use <code>miniconda</code>.</li>
+<li>get python development up and running quickly if connectivity is limited &mdash; use <code>miniconda</code>.</li>
 <li>get more experience installing packages &mdash; use <code>miniconda</code>.</li>
 <li>avoid (as much as possible) all that package management "stuff" &mdash; use <code>anaconda</code>.</li>
-<li>play around and explore python tools &mdash; use <code>anaconda</code>.</li>
+<li>play around and explore python tools without needing to install them first &mdash; use <code>anaconda</code>.</li>
 </ul>
-<p>So a <code>miniconda</code> user will have faster initial download and less hard disk space used, but will need to install extra packages more frequently than an <code>anaconda</code> user.</p>
-<p>It is possible to have multiple python distributions installed on your system &mdash; you just have to manage the system paths to allow you to switch between. This done using name <em>environments</em>, activating the environment you need for a given use.  </p>
+<p>So a <code>miniconda</code> user will have faster initial download and use less hard disk space, but will need to install extra packages more frequently than an <code>anaconda</code> user.</p>
+<p>It is possible to have multiple python distributions installed on your system &mdash; you just have to manage the system paths to allow you to switch between. This done using named <em>environments</em>, activating the specific environment you need for a given use.</p>
 <p>Finally, there are other options &mdash; all of which should be suitable for this course's needs. However, while I am happy to help sort out issues, my priority will be sorting issues in <code>anaconda</code> and <code>miniconda</code>.</p>
 <ul>
 <li>Standard Python from <a href="https://www.python.org/">Python Software Foundation</a>.</li>
@@ -199,7 +199,7 @@ Next we cover installation of python using either a full <a href="https://www.an
 <p>On MacOS using <a href="https://docs.brew.sh/Language-Runtimes-and-Packages">homebrew</a> or <a href="https://www.macports.org/">MacPorts</a>, see <a href="https://saagarjha.com/blog/2019/04/26/thoughts-on-macos-package-managers/">Thoughts on macOS Package Managers</a> which preferred MacPorts, although Homebrew is often seen as easier to use, but only on recent Macos versions.</p>
 <ul>
 <li>Homebrew with <a href="https://github.com/pyenv/pyenv">pyenv</a> works nicely on Macos.</li>
-<li><a href="https://github.com/astral-sh/uv">uv</a> is the new cool tool that supposedly solves all python installation problems.</li>
+<li><a href="https://github.com/astral-sh/uv">uv</a> is the new "cool" tool that supposedly solves all python installation problems. It does things in a clean way, but is not mainstream yet and is probably better seen as a more modern replacement for the combination of <code>pip</code> and <code>poetry</code>.</li>
 </ul>
 </li>
 <li>
@@ -211,7 +211,7 @@ Next we cover installation of python using either a full <a href="https://www.an
 <p>To install anaconda:</p>
 <ul>
 <li>Pick any suitable 64-bit, Python 3.14 installer for you system from <a href="https://www.anaconda.com/download">anaconda</a>.</li>
-<li>Run installer and default options should work for your system (But to be sure, 
+<li>Run the installer and default options should work for your system (But to be sure, 
  read options and verify that any option like 
  "Add python to PATH environment variable",
  "Increase length of PATH environment variable",
@@ -222,8 +222,8 @@ Next we cover installation of python using either a full <a href="https://www.an
 <h3>Miniconda (python distribution)</h3>
 <p>To install miniconda:</p>
 <ul>
-<li>Pick any suitable 64-bit, Python 3.12+ installer for you system from <a href="https://www.anaconda.com/docs/getting-started/miniconda/install">miniconda</a>.</li>
-<li>Run installer and default options should work for your system. Under MacOS, I typically install into my home directory, so will end up with a folder <code>~/miniconda3</code>.</li>
+<li>Pick any suitable 64-bit, Python 3.14 installer for your system from <a href="https://www.anaconda.com/docs/getting-started/concepts/anaconda-or-miniconda">miniconda</a>.</li>
+<li>Run installer and default options should work for your system. Under MacOS, a typical install will end up with a folder <code>~/miniconda3</code>.</li>
 </ul>
 <p>We will assume that people who select the miniconda know what they are doing and so the rest of this guide is more focused on Anaconda not Miniconda.</p>
 <h3>Verify Installation</h3>
@@ -235,7 +235,6 @@ Next we cover installation of python using either a full <a href="https://www.an
 
 <p>Either way, you should see that your prompt has been prefixed with <code>(base)</code>, indicating that the default (base) environment has been activated.</p>
 <p>Students should then check that <code>python</code> is available:</p>
-<p>to get output and a python prompt similar to below (The important bit is "Python 3.14".)</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python
 </code></pre></div></td></tr></table></div>
 
@@ -259,56 +258,61 @@ Type<span class="w"> </span><span class="s2">&quot;help&quot;</span>,<span class
 <p><a name="ExtraPackages"></a></p>
 <h2>Extra Packages</h2>
 <p>If using anaconda, you can install a package using the Anaconda Navigator GUI.</p>
-<p>Both <code>anaconda</code> and <code>miniconda</code> use a package manager called <code>conda</code>. To install a package from the command line, you typically use command </p>
+<p>Both <code>anaconda</code> and <code>miniconda</code> use a package manager called <code>conda</code>. To install a package using anaconda, you can use the GUI or the command line as shown below. Miniconda does not offer the option of using a GUI.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>PACKAGE_NAME
 </code></pre></div></td></tr></table></div>
 
 <p>The <code>-y</code> option causes the install to automatically carry out required installs/updated instead of asking for user confirmation. </p>
-<p>Note: some packages are not installable using <code>conda</code>, in these cases or if your are using a standard (non-anaconda variant) distribution you can install using the <code>pip</code> installer using </p>
+<p>Note: some packages are not installable using <code>conda</code>, in these cases or if you are using a standard (non-anaconda variant) distribution you can install using the <code>pip</code> installer using </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>PACKAGE_NAME
 </code></pre></div></td></tr></table></div>
 
 <h3>Side Note: Environments</h3>
-<p>Both <code>conda</code> and <code>pip</code> support the idea of environments where within one python distribution you might have many environments. This is to help avoid version conflicts between modules.  <code>anaconda</code> and <code>miniconda</code> both ship with one default environment called <code>base</code>.  If you wish to use environments, you need to apply two steps: 1) create an environment called <code>data_mining</code> using </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">data_mining</span>
+<p>Both <code>conda</code> and <code>pip</code> support the idea of environments where within one python distribution you might have many environments. This is to help avoid version conflicts between modules.  <code>anaconda</code> and <code>miniconda</code> both ship with one default environment called <code>base</code>.  If you wish to use environments, you need to apply two steps: 1) create an environment called <code>ai_engineering</code> using </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ai_engineering
 </code></pre></div></td></tr></table></div>
 
 <p>and 2) activate it using </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>data_mining
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>ai_engineering
 </code></pre></div></td></tr></table></div>
 
 <p>Since all of the packages that we plan to use are (currently, Sep 2026) compatible we won't need to use multiple environments but they are a good idea (e.g., if you already use conda packages for other purposes) and if you are interested there is a nice introduction at <a href="https://astrobiomike.github.io/unix/conda-intro">
 Happy Belly Bioinformatic</a>.</p>
-<h3>Packages that need to be installed if using <code>miniconda</code> (they are already included in anaconda)</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">numpy</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">scipy</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">matplotlib</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">seaborn</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">jupyterlab</span>
-</code></pre></div></td></tr></table></div>
-
-<p>(we will update the above list during the semester, if needed)</p>
-<h3>Packages that need to be installed if using <code>miniconda</code> or <code>anaconda</code></h3>
+<h3>Packages that are included in anaconda <code>base</code>, but need to be installed if miniconda or <code>ai_engineering</code> is used</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">dtale</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">featuretools</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="o">-</span><span class="n">y</span> <span class="n">graphviz</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="o">-</span><span class="n">y</span> <span class="n">pydot</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>ai_engineering<span class="w"> </span><span class="c1"># if you wish to install them in this environment</span>
+conda<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>numpy
+conda<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>scipy
+conda<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>matplotlib
+conda<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>seaborn
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-y<span class="w"> </span>jupyterlab
+</code></pre></div></td></tr></table></div>
 
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">phik</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">y</span> <span class="n">pingouin</span>
+<p>(we will update the above list during the semester, if needed)</p>
+<h3>Packages that need to be installed if using either <code>miniconda</code> or <code>anaconda</code></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-y<span class="w"> </span>featuretools
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>anaconda<span class="w"> </span>-y<span class="w"> </span>graphviz
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>anaconda<span class="w"> </span>-y<span class="w"> </span>pydot
+
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-y<span class="w"> </span>phik
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-y<span class="w"> </span>pingouin
 </code></pre></div></td></tr></table></div>
 
 <p>(We will update the above list during the semester, if needed.)</p>
+<p>Note that some students might encounter delays with installing <code>dtale</code>, because it has not updated many of its dependencies recently and so <code>conda</code> needs to exercise care to avoid version conflicts. This care shows up in very long solve times...</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-y<span class="w"> </span>dtale
+</code></pre></div></td></tr></table></div>
+
+<p>Therefore we recommend attempting to install <code>dtale</code> after installing the other dependencies above, and it is also highly advisable to install<code>dtale</code> into a smaller, lean <code>machine_learning</code> environment.</p>
 		
 		<ul class="pager">
 			
