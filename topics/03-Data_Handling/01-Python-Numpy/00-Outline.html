@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>aie26</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=226272" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="" target="_blank"><img height="15pt" src="style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li class="active">
+											<a href="../../../topics/03-Data_Handling/index.html#01-Python-Numpy">Python-Numpy</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Data_Handling/index.html#02-Pandas-Introduction">Pandas-Introduction</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Data_Handling/index.html#10-Pandas-Lab">Pandas-Lab</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>Overview</h1>
+<p>This week, we wish to consider how data is handled in the python ecosystem.</p>
+<p>This lab looks at python features and also at numpy, which is one of the core
+libraries in the python data ecosystem, because of its support for array-like objects.</p>
+<h2>Python for data manipulation</h2>
+<p>Python is a general-purpose language and student shave been introduced to python
+in other modules.</p>
+<p><a href="files/pythonIntro.ipynb">This notebook</a> describes some useful features and
+includes some exercises for the student. </p>
+<h2>Numpy</h2>
+<p>Many other modules, including the better-known pandas, build upon Numpy.</p>
+<p><a href="files/introToNumpy.ipynb">This notebook</a> describes some of its features and includes
+some exercises for you to try.</p>
+<h2>Other resources</h2>
+<h3>W3 Schools Numpy Tutorial</h3>
+<p>W3 schools provides a <a href="https://www.w3schools.com/python/numpy/">tutorial in bite-sized pieces</a>, with each lesson offering simple examples that can run in your browser.</p>
+<p>The tutorial has 3 categories:</p>
+<ul>
+<li>Basic: how Numpy works in practice - all of the lessons in this category are
+  relevant to this module</li>
+<li>Random: data distributions (normal, uniform and, to a lesser extent,
+  exponential, Poisson and Chi-square distributions are relevant to this
+  module).</li>
+<li>ufuncs (Universal functions) extend conventional Python functions to work
+  seamlessly with Numpy <code>ndarray</code> variables. They also permit developers to
+  work on "normal" Python variables as if they were Numpy variables, and thus
+  to benefit from <em>vectorisation</em>. If the expression is wrapped in a ufunc,
+  developers can avoid writing loops, or even list comprehensions to iterate
+  over vectors and arrays, because the expression is vectorised implicitly and
+  applied to matching elements of its arguments. Apart from simplifying the
+  code, vectorisation is much more efficient, because the expression is
+  converted to fast operations that occur below the Python layer, directly in
+  its C-language runtime. I recommend looking at the first 5 lessons and the
+  last lesson <em>Set Operations</em> in this lesson category, as these lessons may
+  prove useful to you in this module.</li>
+</ul>
+<p>Lastly, there is a W3 Schoopls quiz you can attempt to test your knowledge.</p>
+<h3>Numpy official documentation</h3>
+<p>Numpy is a mature project and has comprehensive and well-written <a href="https://numpy.org/doc/stable/">online
+documentation</a>.</p>
+<p>After attempting the W3 Schools lessons above, you might also find it helpful
+to go a bit deeper into those Numpy concepts.</p>
+<p>The <a href="https://numpy.org/doc/stable/user/absolute_beginners.html">Absolute Beginner's
+Guide</a> is pitched at
+a similar level to the W3 Schools lessons, but provides more background,
+contezt and examples.</p>
+<p>If you have time, the <a href="https://numpy.org/doc/stable/user/index.html#user">User
+Guide</a> will improve your
+abilities, by taking you from competent to confidently using Numpy.</p>
+<p>The <a href="https://numpy.org/doc/stable/reference/index.html#reference">Reference
+Guide</a> is not a
+learning resource as such, but will be more useful to you when trying to find
+and configure Numpy features while working on your programming assignments.</p>
+<p>Lastly, the Numpy site also has its own <a href="https://numpy.org/numpy-tutorials">online
+tutorial</a> sourced from the community, but it
+is more advanced than is necessary for this module.</p>
+<h3>Other resources</h3>
+<p>Youtube videos are available, but the scope for interacting with the content is
+limited and so, for active learners in particular, maintaining focus and
+retaining the content might be difficult. They are best consumed as background
+information. Also, be careful: older videos will describe versions of Numpy
+prior to version 2.0. Significant changes were made when Numpy 2.0 was
+introduced, some of which broke existing code that used Numpy.</p>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
