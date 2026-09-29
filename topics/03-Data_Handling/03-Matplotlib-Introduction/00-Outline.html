@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>aie26</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=226272" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="" target="_blank"><img height="15pt" src="style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/03-Data_Handling/index.html#01-Python-Numpy">Python-Numpy</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Data_Handling/index.html#02-Pandas-Introduction">Pandas-Introduction</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/03-Data_Handling/index.html#03-Matplotlib-Introduction">Matplotlib-Introduction</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Data_Handling/index.html#10-Pandas-Lab">Pandas-Lab</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>Overview</h1>
+<p>The third topic in this week's lecture is also being presented in notebook format,
+instead of slides, because it is easier to show how Matplotlib  works by using it in practice.</p>
+<p>In machine learning, we need to understand and interpret the data
+before building any models. We can do this with tabular methods: displaying 
+dataframes, computing descriptive statistics (like averages and  counts),
+computing contingency tables, etc. Most of this work can be done using Pandas.
+After building candidate models, we typically need to assess their suitability
+for the problem (e.g., by computing metrics like <em>accuracy</em>) and try to find
+the best model in a set of fitted models (usually by comparing metrics and choosing
+the model associated with either the lowest value or highest value, depending on the metric).</p>
+<p>Visualisation plays a very important role in both Exploratory Data Analysis (before
+model building) and model validation (during and after model building).</p>
+<p>The python data ecosystem includes many plotting packages, but most of them are built
+upon the foundations provided by <a href="https://matplotlib.org/">Matplotlib</a>,
+which allows plots to be built up using python code. Typically the procedure is to</p>
+<ul>
+<li>import Matplotlib</li>
+<li>Create a blank <code>figure</code></li>
+<li>Add graphical elements (the Matplotlib term is <code>Artists</code>) to this figure</li>
+<li>Configure the plotting elements until the plot "looks right"</li>
+<li>Show the plot on the screen, optionally saving the configured object to a file (PNG or equivalent).</li>
+</ul>
+<p>Creating a figure is typically an iterative process, so it is convenient to 
+develop such plots within notebooks. The code to generate the plot can be placed
+in a code cell, and the default output location is "inline" in the notebook, i.e.,
+directly below its code cell. This is analogous to how <em>text</em> output is placed
+directly below its code cell.</p>
+<p>If you view the actual content of the Notebook file (say, <code>MyNotebook.ipynb</code>)
+in a text editor, you will find that the image is base64-encoded in the JSON structure.
+Jupyter-lab (or equivalent editor) manages this for you.</p>
+<h2>Simple Matplotlib interface</h2>
+<p>The simplest way to get a Matplotlib plot is to use the so-called <code>pyplot</code> interface.
+This was designed to be easy to use, especially for programmers who were familiar
+with how <a href="https://www.mathworks.com/products/matlab.html">MATLAB</a> generates plots.</p>
+<p>The code will look something like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reciprocal</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;b+&#39;</span><span class="p">)</span> <span class="c1"># plot y against x, using blue &#39;+&#39; markers</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;1/x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Example pyplot&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+
+<p>Here is the <a href="files/pyplot.ipynb">code</a> used in <a href="https://matplotlib.org/stable/tutorials/pyplot.html">Matplotlib's Pyplot tutorial</a>.</p>
+<p>As you can see, it is possible to generate impressive plots using this API, but
+it is recommended that, for more complex use cases, the alternative object-oriented
+API (described below) is used instead.</p>
+<h2>OO Matplotlib interface</h2>
+<p>For greater flexibility, Matplotlib also exposes a full object-oriented API.</p>
+<p>This allows programmers greater control over the graphical elements, making it
+easier to configure subplots, axes, plot types, etc., independently.</p>
+<p>The following diagram introduces the major graphics elements in a plot.</p>
+<p><img alt="Matplotlib figure elements, with annotations" src="files/anatomy.png" title="Matplotlib elements" /></p>
+<p>Here is the <a href="files/quick_start.ipynb">code</a> used in <a href="https://matplotlib.org/stable/users/explain/quick_start.html#quick-start">Matplotlib's User Guide</a>.</p>
+<p>You are free to choose each API for different plots within a notebook, but it is not advisable
+to mix the two styles on the same plot in a single cell.</p>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
