@@ -83,15 +83,11 @@
 										<li class="dropdown-header">Resources</li>
 										
 										<li >
-											<a href="../../../topics/04-Exploratory_Data_Analysis/index.html#01-EDA_Pass1">EDA Pass1</a>
-										</li>
-										
-										<li >
-											<a href="../../../topics/04-Exploratory_Data_Analysis/index.html#02-EDA_Pass2">EDA Pass2</a>
+											<a href="../../../topics/05-Exploratory_Data_Analysis2/index.html#01-EDA_Pass3">EDA Pass3</a>
 										</li>
 										
 										<li class="active">
-											<a href="../../../topics/04-Exploratory_Data_Analysis/index.html#10-practical">practical</a>
+											<a href="../../../topics/05-Exploratory_Data_Analysis2/index.html#10-practical">practical</a>
 										</li>
 										
 									</ul>
@@ -139,64 +135,24 @@
 		</ul>
 		
 		<h1>Overview</h1>
-<p>This week, you are asked to work through the first three tutorials from the
-<a href="https://github.com/stefmolin/pandas-workshop">pandas_workshop</a>.</p>
-<!--Please refer to the README for advice on how to setup the workshop. Note the
-advice to create a conda/pip environment specifically for Pandas Workshop
-learning, to avoid package dependency conflicts with the environment you
-created for your other work in the Data Mining 1 module.-->
-
-<p>The tutorials will help you to become more familiar with pandas features that
-you will need for your CA1 attempts.</p>
-<p>The resources (datasets, notebooks and supporting files) can be downloaded from
-<a href="files/lab04.zip">here</a>. Students should right click on the link, download and
-unzip it within the folder they use for this module.</p>
-<h2>Preliminary</h2>
-<p>The Pandas Workshop needs specific versions of many python packages, so users
-are recommended to create a conda environment that is specific to this workshop.</p>
-<p>The easiest way to set up your <code>pandas_workshop</code> environment is to
-issue the following commands from either the Anaconda Prompt or your
-MacOS/Linux terminal, after changing directory to your <code>lab04</code> folder</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--file<span class="o">=</span>environment.yml
-conda<span class="w"> </span>activate<span class="w"> </span>pandas_workshop
-</code></pre></div></td></tr></table></div>
-
-<h2>Getting Started</h2>
-<p>The Getting Started notebook
-provides a gentle introduction to Pandas, supplementing the Pandas introduction
-you saw in previous weeks.</p>
-<p>Sections include</p>
-<ul>
-<li>Anatomy of a DataFrame</li>
-<li>Creating Dataframes</li>
-<li>Inspecting the data</li>
-<li>Extracting subsets</li>
-<li>Calculating Summary Statistics</li>
-</ul>
-<h2>Data Wrangling</h2>
-<p>The Data Wrangling notebook is complementary to the treatment introduced in
-class, where data is loaded, inspected, cleaned, etc.</p>
-<p>Sections include</p>
-<ul>
-<li>Data Cleaning</li>
-<li>Working with the Index</li>
-<li>Reshaping data</li>
-<li>Aggregations and Grouping</li>
-</ul>
-<h2>Data visualisation</h2>
-<p>The Data Visualisation notebook introduces some of the visualisation features
-that are built in to pandas, and adds some more from seaborn.</p>
-<p>Sections include</p>
-<ul>
-<li>Using pandas: lineplots, barplots, distribution plots</li>
-<li>Using seaborn: Adding a dimension using hue; heatmaps and more advanced plots</li>
-<li>Using matplotlib directly: shading and annotations</li>
-</ul>
-<h2>Exercises</h2>
-<p>There are also some exercises built in to both workbooks so that you can check
-your understanding.</p>
-<p>For your convenience, you can add your code snippets to <code>workbook.ipynb</code>.</p>
+<p>The notebook for this week (<code>01-hrAnalytics.ipynb</code>) is concerned with
+seaborn-based visualisations, and on how you can quickly get a sense
+of what is happening even in a moderately complex data set
+(<code>archive.zip</code>).</p>
+<p>Note that this notebook uses widgets to select visualisations
+dynamically. This is useful for development and exploration, but
+should be supplemented with a set of visualisations <em>chosen by the
+developer as being significant</em>. These significant visualisations
+should be discussed and interpreted for the benefit of notebook
+<em>consumers</em>.</p>
+<p>The exercise is to extend the notebook, and also to consider how to develop
+a set of visualisations suitable for your CA1 attempt, which should be 
+structured so that it is repeatable (using good programming practices,
+efficient use of libraries, etc.).</p>
+<h2>Resources</h2>
+<p>The resources (dataset and notebook) can be downloaded from
+<a href="files/lab05.zip">here</a> and unzipped within your working folder for
+this module.</p>
 		
 		<ul class="pager">
 			
