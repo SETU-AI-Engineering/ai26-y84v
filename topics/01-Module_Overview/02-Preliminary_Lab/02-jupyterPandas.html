@@ -156,9 +156,9 @@
 <p>We will go into how notebooks can be used in a later lab.</p>
 <p>For now, we will just check that the software has been installed successfully.</p>
 <h2>Get the data file</h2>
-<p>If you have not done so already, you need to download <a href="files/auto-mpg.csv">auto-mpg.csv</a>.</p>
+<p>If you have not done so already, you need to download <a href="files/lab01.zip">lab01.zip</a>. After unzipping this file, you will find the data file at this relative path: <code>lab01/data/auto-mpg.csv</code>.</p>
 <h2>Navigate to a suitable directory/folder</h2>
-<p>For this purpose, my advice is to change directory to where you downloaded <code>auto-mpg.csv</code></p>
+<p>For this purpose, my advice is to change directory to <code>lab01</code>.</p>
 <h2>Activate conda, so that the dependencies are in your python path</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>activate
 </code></pre></div></td></tr></table></div>
@@ -186,7 +186,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">auto_mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;auto-mpg.csv&#39;</span><span class="p">)</span>
+<span class="n">auto_mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/auto-mpg.csv&#39;</span><span class="p">)</span>
 <span class="n">auto_mpg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 
