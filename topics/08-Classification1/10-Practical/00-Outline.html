@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>aie26</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=226272" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="" target="_blank"><img height="15pt" src="style/misc/img/slack_logo.png" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/08-Classification1/index.html#01-Overview">Overview</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/08-Classification1/index.html#02-Logistic_Regression">Logistic Regression</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/08-Classification1/index.html#10-Practical">Practical</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>PCA (worked example) and Logistic Regression for handwritten digit recognition</h1>
+<h2>Notebooks</h2>
+<p>In this topic's lab, we consider three aspects</p>
+<ol>
+<li>
+<p><em>Principal Components Analysis</em> (PCA) is a powerful technique for reducing
+   the dimensionality of a feature space while keeping as much as possible of
+   the predictive power of the full feature space. This notebook
+   (<code>01-Digits-PCA_introduction.ipynb</code>) walks through the procedure and
+   describes how it works by applying it to a very simple example, where the
+   number of dimensions is low enough to be visualised easily.</p>
+</li>
+<li>
+<p><em>Logistic Regression</em> was covered in class. This notebook gives students an
+   opportunity to walk through this classification procedure, using the
+   implementation in scikit-learn. The data we choose to classify is the
+   well-known NIST handwriting recognition dataset. This notebook
+   (<code>02-Digits-LR.ipynb</code>) brings together train-test split, cross-validation,
+   classifier performance analysis and ridge regression, so students are
+   encouraged to study it carefully.</p>
+</li>
+<li>
+<p>Comparing <em>KNN</em> and <em>Logistic Regression</em> with Bangalore EED epilepsy
+   dataset.  This dataset contains EEG traces from multiple areas of the scalp,
+   for 1000s of patients, from those without epilepsy and those with different
+   grades of the disease. The notebook computes classification reports, ROC and
+   AUC for 2 classes, which are treated as being with and without epilepsy.
+   This notebook (<code>03-Epilepsy-KNN_LR.ipynb</code>) combines train-test split, row
+   sampling, use of KNN and LogisticRegression, classification reports and
+   ROC/AUC analysis. The data can be found in <code>data/BEED_Data.csv</code>.</p>
+</li>
+</ol>
+<p>Notebook 2 suggests the following exercise:</p>
+<ul>
+<li>add dimensionality reduction/PCA (see notebook 1 for an example).</li>
+</ul>
+<p>Notebook 3 invites students to use SMOTE oversampling to re-balance the partial
+epilepsy data, and to compare the resulting metrics with those obtained earlier
+in the notebook, identifying the differences and explaining them.</p>
+<h2>Resources</h2>
+<p>The notebooks, dataset and other resources can be found in <a href="files/lab08.zip">this
+archive</a>.</p>
+<p>More information on how <em>forward selection</em> works can be obtained from
+<code>forwardSelection.pdf</code> in the <code>lab08.zip</code> archive you downloaded.</p>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
